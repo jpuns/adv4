@@ -1,4 +1,4 @@
-const port = process.env.PORT; //|| 10000;
+const port = process.env.PORT;
 const server = require("http").Server();
 
 var io = require("socket.io") (server);
@@ -45,7 +45,6 @@ io.on("connection", function(socket){
         }
         io.emit("result", msg);
         
-  
     })
     
     socket.on("qsubmit", function(data){
